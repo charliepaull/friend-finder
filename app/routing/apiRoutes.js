@@ -1,6 +1,9 @@
 // require path to get correct file paths for HTML
 var path = require("path");
 
+// require friends.js file to allow apiRoutes to use
+var friends = require("../data/friends");
+
 // ROUTING
 // --------------
 
@@ -9,14 +12,17 @@ module.exports = function(app){
     and displaying them to the browser*/
     // code invoked when user visits a specific URL page
 
-    // get request that routes to the homepage
+    /* GET request that routes to the homepage, 
+    will show when user clicks on "API Friends" button on home.html*/
     app.get("/api/friends", function(req, res){
-        // NEED TO CHANGE: API routes, not HTML: ------
-        // res.sendFile(path.join(__dirname, "../public/home.html"));
+        // functionality to GET data from server
+        res.json(friends);
     });
 
+    /* POST request adds user inputted data to friendData array
+    in friends.js file*/
     app.post("/api/friends", function(req, res){
-        // NEED TO CHANGE: API routes, not HTML: ------
-        // res.sendFile(path.join(__dirname, "../public/survey.html"));
+        // functionality to POST data to server
+        res.json(friends);
     });
 }

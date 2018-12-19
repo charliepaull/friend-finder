@@ -24,13 +24,15 @@
     </div>
 </body>
 <script>
+    // on-click to route to survey page
     $(".btn-primary").on("click", function(event){
         //console.log("this has been clicked!");
         window.location.href="/survey";
     })
 
+    // on-click to route to friends array data
     $(".badge-warning").on("click", function(event){
-        window.location.href=""
+        window.location.href="/api/friends";
     })
 </script>
 </html>

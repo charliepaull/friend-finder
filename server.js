@@ -1,11 +1,12 @@
-// require express & path
+// require express
 var express = require("express");
 
 // Sets up Express - BOILER PLATE 
 // --------------------------------
 var app = express(); //triggers express
-// set up PORT
-var PORT = 3000;
+
+// set up PORT - PORT# through Heroku or localhost
+var PORT = process.env.PORT || 3000;
 
 // Sets up Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
