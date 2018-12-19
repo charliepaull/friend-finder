@@ -1,0 +1,12 @@
+body {
+    width: 960px;
+}
+
+.jumbotron {
+    margin: auto;
+    width: 75%;
+}
+
+.badge-warning {
+    margin-left: 153px;
+}

@@ -11,10 +11,12 @@ module.exports = function(app){
 
     // get request that routes to the homepage
     app.get("/api/friends", function(req, res){
-        res.sendFile(path.join(__dirname, "../public/home.html"));
+        // NEED TO CHANGE: API routes, not HTML: ------
+        // res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 
     app.post("/api/friends", function(req, res){
-        res.sendFile(path.join(__dirname, "../public/survey.html"));
+        // NEED TO CHANGE: API routes, not HTML: ------
+        // res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 }
