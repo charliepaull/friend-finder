@@ -8,9 +8,6 @@ var friends = require("../data/friends");
 // --------------
 
 module.exports = function(app){
-    /*HTML GET REQUESTS (getting the data from .html pages)
-    and displaying them to the browser*/
-    // code invoked when user visits a specific URL page
 
     /* GET request that routes to the homepage, 
     will show when user clicks on "API Friends" button on home.html*/
