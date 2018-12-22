@@ -10,11 +10,11 @@ module.exports = function(app){
     // code invoked when user visits a specific URL page
 
     // get request that routes to the homepage
-    app.get("/", function(req, res){
-        res.sendFile(path.join(__dirname, "../public/home.html"));
-    });
-
     app.get("/survey", function(req, res){
         res.sendFile(path.join(__dirname, "../public/survey.html"));
+    });
+
+    app.get("*", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 }

@@ -20,6 +20,9 @@ module.exports = function(app){
     in friends.js file*/
     app.post("/api/friends", function(req, res){
         // functionality to POST data to server
-        res.json(friends);
+        friends.push(req.body);
+        res.json(true);
+
+    // POST REQUEST IS WORKING 
     });
 }
